@@ -1,5 +1,12 @@
-package birdwatcher
+package main
 
+import "fmt"
+
+func main() {
+	fmt.Println(TotalBirdCount([]int{1, 2, 3, 4, 5, 6, 7, 8,}))
+	fmt.Println(BirdsInWeek([]int{1, 2, 3, 4, 5, 6, 7, 8,}, 2))
+	fmt.Println(FixBirdCountLog([]int{1, 2, 3, 4, 5, 6, 7, 8}))
+}
 // TotalBirdCount return the total bird count by summing
 // the individual day's counts.
 func TotalBirdCount(birdsPerDay []int) int {

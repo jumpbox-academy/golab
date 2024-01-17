@@ -1,9 +1,17 @@
-package lasagna
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(RemainingOvenTime(10))
+	fmt.Println(PreparationTime(10))
+	fmt.Println(ElapsedTime(10, 10))
+}
 // TODO: define the 'OvenTime' constant
 	const OvenTime = 40
 // RemainingOvenTime returns the remaining minutes based on the `actual` minutes already in the oven.
 func RemainingOvenTime(actualMinutesInOven int) int {
-	return OvenTime - actualMinutesInOven
+	return (OvenTime - actualMinutesInOven)
 }
 
 // PreparationTime calculates the time needed to prepare the lasagna based on the amount of layers.

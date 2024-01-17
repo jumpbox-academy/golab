@@ -1,5 +1,12 @@
-package purchase
+package main
 
+import "fmt"
+
+func main()	{
+	fmt.Println(NeedsLicense("car"))
+	fmt.Println(ChooseVehicle("car", "truck"))
+	fmt.Println(CalculateResellPrice(10000, 5))
+}
 // NeedsLicense determines whether a license is need to drive a type of vehicle. Only "car" and "truck" require a license.
 func NeedsLicense(kind string) bool {
 	return kind == "car" || kind == "truck"
