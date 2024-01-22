@@ -32,6 +32,20 @@ if nyTemp, ok := tempByCity["New York"]; ok {
     increaseTemp(&nyTemp, 2.0)
     tempByCity["New York"] = nyTemp
 }
+// Increase temperature of Los Angeles
+if laTemp, ok := tempByCity["Los Angeles"]; ok {
+    increaseTemp(&laTemp, 5.0)
+    tempByCity["Los Angeles"] = laTemp
+}
+// Increase temperature of Chicago
+if ccTemp, ok := tempByCity["Chicago"]; ok {
+    increaseTemp(&ccTemp, 8.0)
+    tempByCity["Chicago"] = ccTemp
+}
+
+for city, temp := range tempByCity {
+    fmt.Printf("Temperature increase in %s is %.2f\n", city, temp)
+	}
 
 // Update weekTemps and recalculate the average
 weekTemps = [7]Temperature{10.0, 12.0, 15.0, 17.0, 20.0, 22.0, 25.0}
